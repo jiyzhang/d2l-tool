@@ -9,12 +9,12 @@
 *   **用途**：此脚本用于为 Markdown 文件中所有 MXNet 框架的代码块自动添加 `#@tab mxnet` 标签。
 *   **问题背景**：`d2lbook` 默认将不带框架标签的代码块识别为 MXNet。然而，在某些环境（如 macOS）中，MXNet 可能未安装或与 MLX 等其他框架存在冲突。在执行 `d2lbook build eval --tab mlx` 时，这些未显式标记的 MXNet 代码块仍会被尝试构建，从而导致因缺少 MXNet 库而产生的错误。通过为 MXNet 代码块添加 `#@tab mxnet`，可以确保 `d2lbook` 正确识别它们，并在构建时进行相应处理。
     *   **原始代码块示例**：
-        ```python
+
         ```{.python .input}
         # some MXNet code...
         print("Hello from MXNet")
         ```
-        ```
+
     *   **处理后代码块示例**：
         ```{.python .input}
         #@tab mxnet
